@@ -1,7 +1,7 @@
 \version "2.24.4"
 
 \header {
-  title = "മതബോധന ദിനം "
+  title = "മതബോധന ദിനം " %tets
   %composer = "Joby"
 }
 \markup \bold \larger "വാവ യേശുനാഥാ ....."
