@@ -79,6 +79,8 @@ d4 d d| e e e | d d d | d d2 |c4 c c |b b2 |a4 a2|g4 g g|f f f |a a2~|a2.|
 \markup \bold \larger "Church Music"
 \score {
 \relative {
+  \tempo "Allegro" 4 = 132
+  
 \key a \major 
 \override Accidental.stencil = ##f  
 \time 4/4

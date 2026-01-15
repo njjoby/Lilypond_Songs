@@ -7,6 +7,10 @@
 \markup \bold \larger "വാവ യേശുനാഥാ ....."
 \score {
 \relative {
+ \set Staff.midiInstrument = "guitar"
+  %\set Staff.midiInstrument = "violin"
+ \tempo 4 = 160
+
 \key a \major 
 \override Accidental.stencil = ##f  
 \time 3/4
@@ -25,7 +29,7 @@
 \markup \bold \larger "നന്മ നേരും  അമ്മ ....."
 \score {
 \relative {
-\key a \major 
+\key d \major 
 \override Accidental.stencil = ##f  
 \time 3/4
 \repeat volta 2 {
@@ -36,7 +40,7 @@ d''2 d4 |d2 d4 |d d2( | d2.) |d4 d2 | d f4 |e e2( | e2.) | e4e2 |e g4 | f f2( | 
 \break
 \repeat volta 2 { 
 %\bar ".|:" 
-d2 d4 |d2b4|b4b2( |b2.)|d4 d2|d b4 | a a2~ | a2.|
+d2 d4 |d2b4|b4b2( |b2.)|d4 d d |d2 b4 | a a2~ | a2.|
 \break
  g2 g4 |b2 b4 | c c2~ | c2. |a4 a2 |c2 e4 |f d2(|d2.)|
 }
@@ -56,8 +60,8 @@ a'4a2 | f2. | a4a2 | f2. | a4a2 | b2 a4 | f4 e2( | e2.) |
 \markup \bold \larger "നിത്യ വിശുദ്ധയാം ......"
 \score {
 \relative {
-  \set Staff.midiInstrument = "violin"
-\tempo 4 = 180
+\set Staff.midiInstrument = "violin"
+\tempo 4 = 120
 \key a \major 
 \override Accidental.stencil = ##f  
 \time 3/4
@@ -77,7 +81,12 @@ e'4 e e |a a a |g8 g2 g8 |a4 a a|g g g| f f f | e e2~|e2.
 \break
 \repeat volta 2 {
 %\bar ".|:" 
-d4 d d| e e e | d8 d2 d8 |e4 e e| d d2 |
+\revert Accidental.stencil
+dis4 d d| e e e 
+
+| dis8 d2 d8 |
+\override Accidental.stencil = ##f  
+e4 e e| d d2 |
 \break 
 c4 c c |b b2 |a4 a2|g4 g g|f f f |a a2~|a2.|
 }
@@ -92,8 +101,8 @@ c4 c c |b b2 |a4 a2|g4 g g|f f f |a a2~|a2.|
  
 
 \relative {
-  \set Staff.midiInstrument = "violin"
-\tempo 4 = 180
+ % \set Staff.midiInstrument = "violin"
+%\tempo 4 = 180
 \key a \major 
 \override Accidental.stencil = ##f  
 \time 4/4
@@ -113,7 +122,7 @@ c4 c c |b b2 |a4 a2|g4 g g|f f f |a a2~|a2.|
 \repeat volta 2 {
 \repeat percent 2{a'8g f4 f8e f4} | f8g a4 a a|b a4. f8 e4|
 \break
-\repeat percent 2{c8d e4 e8c b4}|c8d8 e4 e e|f e8.d16 d2
+\repeat percent 2{c8d e4 e8d c4}|c8d8 e4 e e|f e8.d16 d2
 }
 
 }

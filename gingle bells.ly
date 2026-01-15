@@ -9,7 +9,7 @@
 \score {
   \relative b' {
     \set Staff.midiInstrument = "violin"
-    \tempo 4 = 100
+    \tempo 4 = 120
     \key g \major
     \time 4/4
     \override Accidental.stencil = ##f
