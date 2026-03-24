@@ -37,7 +37,7 @@ partOne = \relative {
 
   partTwo = \relative {
   \repeat volta 2 {
-    \bar ".|:"
+   
     \partial 4 f''8( g) |
     a8 f d f a8 f d f |
     g8 e c e g8 e c e |
@@ -65,7 +65,7 @@ partOne = \relative {
   \midi {}
 }
 
-\markup \bold \larger "MEWIJE AIR"
+\markup \bold \larger "TRADITIONAL MUSIC"
 
 %---------------- GLOBAL SETTINGS ----------------%
 globalb = {
@@ -77,52 +77,41 @@ globalb = {
 }
 
 %---------------- FIRST SECTION ----------------%
-partOneb = \relative {
-  \repeat volta 2 {
-    \bar ".|:"
+partOneb =\relative {
+ % \set Staff.midiInstrument = "violin"
+%\tempo 4 = 180
+\key a \major 
+\override Accidental.stencil = ##f  
+\time 4/4
+\repeat volta 2 {
+\bar ".|:"
+\repeat percent 2{ d''8 e f4 f8e d4} |d8e f4 f f|a g f8 e4.|
 
-    d''8 e f4 f8 e d4 |
-    d8 e f4 f8 e d4 |
-
-    d8 e f4 f f |
-    a g f8 e4. |
-
-   
-
-    c8 d e4 e8 d c4 |
-    c8 d e4 e8 d c4 |
-
-    c8 d e4 e e |
-    f e d8 d4.
-  }
+\repeat percent 2{c8d e4 e8d c4} |c8d e4 e e |f e d8 d4.
 }
 
+
+
+
+
+
+
+\repeat volta 2 {
+\repeat percent 2{a'8g f4 f8e f4} | f8g a4 a a|b a4. f8 e4|
+
+\repeat percent 2{c8d e4 e8d c4}|c8d8 e4 e e|f e8.d16 d2
+}
+
+}
 %---------------- SECOND SECTION ----------------%
-partTwob = \relative {
-  \repeat volta 2 {
 
-    a'8 g f4 f8 e f4 |
-    a8 g f4 f8 e f4 |
-
-    f8 g a4 a a |
-    b a4. f8 e4 |
-
-
-
-    c8 d e4 e8 d c4 |
-    c8 d e4 e8 d c4 |
-
-    c8 d e4 e e |
-    f e8. d16 d2
-  }
-}
 
 %---------------- SCORE ----------------%
 \score {
   {
     \globalb
     \partOneb
-    \partTwob
+  
   }
 
   \layout {}
